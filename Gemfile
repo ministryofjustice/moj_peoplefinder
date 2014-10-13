@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 gem 'rails', '~> 4.1.5'
 
-gem 'peoplefinder', '~> 0.0.2'
+gem 'peoplefinder',
+  git: 'https://github.com/ministryofjustice/peoplefinder.git',
+  branch: 'rails-engine'
 
 gem 'carrierwave',
   git: 'https://github.com/carrierwaveuploader/carrierwave.git',
