@@ -39,5 +39,7 @@ module Peoplefinder
     config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
 
     config.exceptions_app = routes
+
+    config.elastic_search_url = ENV['BONSAI_URL']
   end
 end
