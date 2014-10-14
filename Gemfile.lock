@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/ministryofjustice/peoplefinder.git
-  revision: a5bc54bd7558a92aa79d203f7cc04ae207cf108d
+  revision: 81e5d8f24aed83f21b160d185a32da24266c8aba
   branch: rails-engine
   specs:
     peoplefinder (0.0.2)
