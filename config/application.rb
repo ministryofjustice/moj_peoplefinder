@@ -41,5 +41,7 @@ module Peoplefinder
     config.exceptions_app = routes
 
     config.elastic_search_url = ENV['BONSAI_URL']
+
+    config.start_secure_session = false
   end
 end
