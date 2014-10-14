@@ -43,5 +43,7 @@ module Peoplefinder
     config.elastic_search_url = ENV['BONSAI_URL']
 
     config.start_secure_session = false
+
+    config.support_email = 'people-finder@digital.justice.gov.uk'
   end
 end
