@@ -18,3 +18,5 @@
 # Ignore environment variable configuration
 /.env
 /.ruby-version
+
+/public/assets/
