@@ -12,6 +12,10 @@ gem 'carrierwave',
 gem 'omniauth-gplus',
   git: 'https://github.com/ministryofjustice/omniauth-gplus.git'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'jshint',
