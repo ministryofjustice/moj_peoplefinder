@@ -1,5 +1,6 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings specified here will take precedence over those in
+  # config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -16,14 +17,15 @@ Rails.application.configure do
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
-  # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
+  # For large-scale production use, consider using a caching reverse proxy like
+  # nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS.
-  # config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(mangle: false)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -32,13 +34,15 @@ Rails.application.configure do
   # Generate digests for assets URLs.
   config.assets.digest = true
 
-  # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
+  # Version of your assets, change this if you want to expire all your assets.
+  config.assets.version = '1.0'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+  # Force all access to the app over SSL, use Strict-Transport-Security, and
+  # use secure cookies.
   # config.force_ssl = true
 
   # Set to :debug to see everything in the log.
@@ -53,11 +57,18 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  # Enable serving of images, stylesheets, and JavaScripts from an asset
+  # server.
   # config.action_controller.asset_host = "http://assets.example.com"
 
+  # Precompile additional assets.
+  # application.js, application.css, and all non-JS/CSS in app/assets folder
+  # are already added.
+  # config.assets.precompile += %w( search.js )
+
   # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  # Set this to true and configure the email server for immediate delivery to
+  # raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
@@ -79,4 +90,26 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {
     host: ENV['ACTION_MAILER_DEFAULT_URL']
   }
+
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: '587',
+    authentication: :plain,
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD'],
+    domain: 'heroku.com',
+    enable_starttls_auto: true
+  }
+
+  config.filter_parameters += [
+    :given_name, :surname, :email, :primary_phone_number,
+    :secondary_phone_number, :location, :email
+  ]
+
+  if ENV['INTERCEPTED_EMAIL_RECIPIENT'].present?
+    Mail.register_interceptor RecipientInterceptor.new(
+      ENV['INTERCEPTED_EMAIL_RECIPIENT'],
+      subject_prefix: '[STAGING]'
+    )
+  end
 end
