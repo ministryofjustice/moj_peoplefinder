@@ -30,6 +30,17 @@ module Peoplefinder
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
+    config.support_email =
+        ENV['SUPPORT_EMAIL'] || 'people-finder@digital.justice.gov.uk'
+
+    config.action_mailer.default_options = {
+      from:  config.support_email
+    }
+
+    config.action_mailer.default_url_options = {
+        host: ENV['ACTION_MAILER_DEFAULT_URL']
+    }
+
     config.elastic_search_url = ENV['BONSAI_URL']
 
     config.exceptions_app = routes
@@ -39,8 +50,6 @@ module Peoplefinder
     config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
 
     config.start_secure_session = (ENV['SSL_ON'] =~ /(true|yes|1)$/) == 0
-
-    config.support_email = 'people-finder@digital.justice.gov.uk'
 
     config.valid_login_domains = %w[
       digital.justice.gov.uk
