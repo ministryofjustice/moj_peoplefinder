@@ -28,22 +28,23 @@ module Peoplefinder
     # app title appears in the header bar
     config.app_title = 'People Finder'
 
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+
+    config.elastic_search_url = ENV['BONSAI_URL']
+
+    config.exceptions_app = routes
+
+    config.ga_tracking_id = (ENV['GA_TRACKING_ID'] || '')
+
+    config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
+
+    config.start_secure_session = (ENV['SSL_ON'] =~ /(true|yes|1)$/) == 0
+
+    config.support_email = 'people-finder@digital.justice.gov.uk'
+
     config.valid_login_domains = %w[
       digital.justice.gov.uk
       digital.cabinet-office.gov.uk
     ]
-    config.start_secure_session = (ENV['SSL_ON'] =~ /(true|yes|1)$/) == 0
-
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
-    config.ga_tracking_id = ENV['GA_TRACKING_ID']
-    config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
-
-    config.exceptions_app = routes
-
-    config.elastic_search_url = ENV['BONSAI_URL']
-
-    config.start_secure_session = false
-
-    config.support_email = 'people-finder@digital.justice.gov.uk'
-  end
+   end
 end
