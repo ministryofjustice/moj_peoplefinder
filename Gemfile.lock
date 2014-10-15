@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/ministryofjustice/peoplefinder.git
-  revision: fa050a24b1e8f28d3f173b5f7bad61fe336e2bdc
+  revision: 0bd2c00dc9b4db5676770c1c2066265c23986b2f
   specs:
     peoplefinder (0.0.2)
       ancestry
@@ -112,7 +112,7 @@ GEM
       multi_json
     erubis (2.7.0)
     excon (0.31.0)
-    execjs (2.2.1)
+    execjs (2.2.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     fog (1.20.0)
