@@ -4,7 +4,8 @@ gem 'rails', '~> 4.1.5'
 gem 'unicorn', '~> 4.8.3'
 
 gem 'peoplefinder',
-  git: 'https://github.com/ministryofjustice/peoplefinder.git'
+  git: 'https://github.com/ministryofjustice/peoplefinder.git',
+  ref: '7eb792d70d2bea3da451a9a6a07df73442ab25cc'
 
 gem 'carrierwave',
   git: 'https://github.com/carrierwaveuploader/carrierwave.git',
