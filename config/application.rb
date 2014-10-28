@@ -54,6 +54,7 @@ module Peoplefinder
     config.valid_login_domains = %w[
       digital.justice.gov.uk
       digital.cabinet-office.gov.uk
+      justice.gsi.gov.uk
     ]
    end
 end
