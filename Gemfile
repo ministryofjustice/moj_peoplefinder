@@ -5,8 +5,7 @@ gem 'unicorn', '~> 4.8.3'
 
 gem 'peoplefinder',
   git: 'https://github.com/ministryofjustice/peoplefinder.git',
-  ref: '7eb792d70d2bea3da451a9a6a07df73442ab25cc'
-
+  ref: '70f3477e8afd093c8b76444bd4e9eb740cc779b6'
 gem 'carrierwave',
   git: 'https://github.com/carrierwaveuploader/carrierwave.git',
   tag: 'cc39842e44edcb6187b2d379a606ec48a6b5e4a8'

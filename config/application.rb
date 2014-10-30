@@ -43,6 +43,8 @@ module Peoplefinder
 
     config.elastic_search_url = ENV['BONSAI_URL']
 
+    config.disable_communities = true
+
     config.exceptions_app = routes
 
     config.ga_tracking_id = (ENV['GA_TRACKING_ID'] || '')
