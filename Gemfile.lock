@@ -283,7 +283,6 @@ DEPENDENCIES
   carrierwave!
   dotenv-rails
   jshint!
-  mail
   omniauth-gplus!
   peoplefinder!
   pry-rails

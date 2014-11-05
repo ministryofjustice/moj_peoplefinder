@@ -11,7 +11,7 @@ gem 'carrierwave',
   tag: 'cc39842e44edcb6187b2d379a606ec48a6b5e4a8'
 gem 'omniauth-gplus',
   git: 'https://github.com/ministryofjustice/omniauth-gplus.git'
-gem 'mail'
+
 gem 'recipient_interceptor'
 
 group :production do
