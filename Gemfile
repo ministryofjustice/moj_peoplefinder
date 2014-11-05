@@ -3,9 +3,7 @@ ruby '2.1.2'
 gem 'rails', '~> 4.1.5'
 gem 'unicorn', '~> 4.8.3'
 
-gem 'peoplefinder',
-  git: 'https://github.com/ministryofjustice/peoplefinder.git',
-  ref: '70f3477e8afd093c8b76444bd4e9eb740cc779b6'
+gem 'peoplefinder', '~> 0.1.0'
 gem 'carrierwave',
   git: 'https://github.com/carrierwaveuploader/carrierwave.git',
   tag: 'cc39842e44edcb6187b2d379a606ec48a6b5e4a8'
