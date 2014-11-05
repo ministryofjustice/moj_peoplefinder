@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: peoplefinder_production
-  username: peoplefinder
-  password: <%= ENV['PEOPLEFINDER_DATABASE_PASSWORD'] %>
+  url:   url: <%= ENV['MOJ_PF_DATABASE_URL'] %>
