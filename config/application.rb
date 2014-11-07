@@ -41,7 +41,7 @@ module Peoplefinder
         host: ENV['ACTION_MAILER_DEFAULT_URL']
     }
 
-    config.elastic_search_url = ENV['BONSAI_URL']
+    config.elastic_search_url = ENV['MOJ_PF_ES_URL']
 
     config.disable_communities = true
 
