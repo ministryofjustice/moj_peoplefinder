@@ -57,6 +57,8 @@ module Peoplefinder
       digital.justice.gov.uk
       digital.cabinet-office.gov.uk
       justice.gsi.gov.uk
+      celticsecurity.net
+      pentura.com
     ]
    end
 end
