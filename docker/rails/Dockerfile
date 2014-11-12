@@ -1,4 +1,4 @@
-FROM moj-ruby:latest
+FROM moj-peoplefinder:latest
 
 # Set correct environment variables.
 ENV HOME /root
