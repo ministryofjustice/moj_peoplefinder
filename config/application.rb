@@ -59,6 +59,7 @@ module Peoplefinder
       justice.gsi.gov.uk
       celticsecurity.net
       pentura.com
+      monie.co.uk
     ]
    end
 end
