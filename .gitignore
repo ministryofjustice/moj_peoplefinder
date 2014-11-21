@@ -20,3 +20,6 @@
 /.ruby-version
 
 /public/assets/
+
+# ignore osx .DS_Store
+*.DS_Store
