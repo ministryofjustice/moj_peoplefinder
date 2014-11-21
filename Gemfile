@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
-gem 'rails', '~> 4.1.5'
+gem 'rails', '~> 4.1.8'
 gem 'unicorn', '~> 4.8.3'
 
-gem 'peoplefinder', '~> 0.1.0'
+gem 'peoplefinder',
+    git: 'https://github.com/ministryofjustice/peoplefinder.git'
 gem 'carrierwave',
   git: 'https://github.com/carrierwaveuploader/carrierwave.git',
   tag: 'cc39842e44edcb6187b2d379a606ec48a6b5e4a8'
