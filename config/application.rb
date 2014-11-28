@@ -57,6 +57,7 @@ module Peoplefinder
       digital.justice.gov.uk
       digital.cabinet-office.gov.uk
       justice.gsi.gov.uk
+      yjb.gsi.gov.uk
     ]
    end
 end
