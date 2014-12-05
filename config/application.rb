@@ -58,6 +58,7 @@ module Peoplefinder
       digital.cabinet-office.gov.uk
       justice.gsi.gov.uk
       yjb.gsi.gov.uk
+      legalaid.gsi.gov.uk 
     ]
    end
 end
