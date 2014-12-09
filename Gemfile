@@ -13,8 +13,10 @@ gem 'omniauth-gplus',
 
 gem 'recipient_interceptor'
 
+
 group :production do
   gem 'rails_12factor'
+  gem 'logstasher'
 end
 
 group :development, :test do
