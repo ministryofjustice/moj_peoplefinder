@@ -1,7 +1,6 @@
 #!/bin/bash
 cd /rails
 echo "rails startup"              >>/rails/log/unicorn.log
-
 # We want to run scheduling and db tasks only on the master. For single box environments
 # APP_MASTER_SERVER will not be set so run all the time
 if [ -z "$APP_MASTER_SERVER" -o "$APPHOST" == "$APP_MASTER_SERVER" ]; then
