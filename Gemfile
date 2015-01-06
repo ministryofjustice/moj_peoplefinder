@@ -16,7 +16,7 @@ gem 'recipient_interceptor'
 
 group :production do
   gem 'rails_12factor'
-  gem 'logstasher'
+  gem 'logstasher', '~> 0.6.2'
 end
 
 group :development, :test do
