@@ -16,6 +16,9 @@ $(function(){
     });
   }
 
+  // Tracking breadcrumbs on all pages
+  sendEvent('.breadcrumbs a', 'click', 'all-pages', 'all-pages-breadcrumb-clicked', 'Clicked on a breadcrumb in any page');
+
 
   ifPage('login-page', function (){
     sendEvent('input.button', 'click', 'login-page', 'login-with-email', 'Clicked on "Log in with email" button.');
@@ -79,6 +82,18 @@ $(function(){
         ga('send', 'event', 'search-page', clickValues[3].label, clickValues[3].text);
       }
     });
+  });
+
+  ifPage('team-page', function (){
+      ga('send', 'event', 'team-page', 'looking-at-team-page', "User is looking at a team's page");
+
+      sendEvent('.breadcrumbs a', 'click', 'team-page', 'team-page-breadcrumb-clicked', "Clicked on a breadcrumb in a team's page");
+  });
+
+  ifPage('profile-page', function (){
+    ga('send', 'event', 'profile-page', 'looking-at-profile-page', 'User is looking at a profile page');
+
+    sendEvent('.breadcrumbs a', 'click', 'profile-page', 'profile-page-breadcrumb-clicked', 'Clicked on a breadcrumb in a profile page');
   });
 
 });
