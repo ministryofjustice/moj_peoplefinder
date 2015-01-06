@@ -11,7 +11,6 @@ $(function(){
 
   var sendEvent = function ( selector, ev, page, eventLabel, text ){
     $(selector)[ev](function (){
-        // ga('send', 'event', 'search-index-page', 'next-button', 'Next button clicked to start');
         if( ga && ga instanceof Function)
           ga('send', 'event', page, eventLabel, text);
     });
