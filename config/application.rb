@@ -60,5 +60,9 @@ module Peoplefinder
       yjb.gsi.gov.uk
       legalaid.gsi.gov.uk 
     ]
+
+    # The following values are required by the phase banner
+    config.phase = 'alpha'
+    config.feedback_url = 'https://docs.google.com/a/digital.justice.gov.uk/forms/d/1dJ9xQ66QFvk8K7raf60W4ZXfK4yTQ1U3EeO4OLLlq88/viewform'
    end
 end
