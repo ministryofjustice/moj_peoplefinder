@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/ministryofjustice/peoplefinder.git
-  revision: 24480ceb794b536a2c47b3a0c6467a24fd98ec51
+  revision: 250507bcd169560b8993fa9b05dc2ec38210aefd
   specs:
     peoplefinder (0.1.1)
       ancestry
@@ -35,7 +35,7 @@ GIT
       jquery-rails
       mail
       mini_magick
-      moj_internal_template (~> 0.1.4)
+      moj_internal_template (~> 0.1.5)
       omniauth-gplus (~> 2.0.1)
       paper_trail (~> 3.0.5)
       pg
@@ -175,7 +175,7 @@ GEM
     mini_magick (4.0.1)
     mini_portile (0.6.2)
     minitest (5.5.0)
-    moj_internal_template (0.1.4)
+    moj_internal_template (0.1.5)
       govuk_frontend_toolkit (= 1.3.0)
       govuk_template (= 0.8.1)
       rails (~> 4)
