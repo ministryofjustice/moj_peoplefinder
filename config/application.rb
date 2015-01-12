@@ -47,7 +47,7 @@ module Peoplefinder
 
     config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
 
-    config.force_ssl = (ENV['SSL_ON'] =~ /(true|yes|1)$/) == 0
+    config.force_ssl = ENV['SSL_ON'] != 'false'
 
     config.action_mailer.default_url_options = {
         host: ENV['ACTION_MAILER_DEFAULT_URL'],
