@@ -37,10 +37,6 @@ module Peoplefinder
       from:  config.support_email
     }
 
-    config.action_mailer.default_url_options = {
-        host: ENV['ACTION_MAILER_DEFAULT_URL']
-    }
-
     config.elastic_search_url = ENV['MOJ_PF_ES_URL']
 
     config.disable_communities = true
@@ -51,7 +47,12 @@ module Peoplefinder
 
     config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
 
-    config.start_secure_session = (ENV['SSL_ON'] =~ /(true|yes|1)$/) == 0
+    config.force_ssl = ENV['SSL_ON'] != 'false'
+
+    config.action_mailer.default_url_options = {
+        host: ENV['ACTION_MAILER_DEFAULT_URL'],
+        protocol: (config.force_ssl ? 'https' : 'http')
+    }
 
     config.valid_login_domains = %w[
       digital.justice.gov.uk
