@@ -35,3 +35,9 @@ Build the elastic search indexes
 ``
 heroku run rake environment elasticsearch:import:model CLASS='Peoplefinder::Person' FORCE=y
 ``
+If you want to use New Relic for server side metrics, then you'll want to set the following environment variables:
+
+NEW_RELIC_LICENSE_KEY=your license key
+NEW_RELIC_APP_NAME=the name of the app you want to appear in NR
+
+Alternatively if you're deploying on Heroku, you can simply add the New Relic add on and it will set this for you.
