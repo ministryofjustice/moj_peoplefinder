@@ -47,11 +47,9 @@ module Peoplefinder
 
     config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
 
-    config.force_ssl = ENV['SSL_ON'] != 'false'
-
     config.action_mailer.default_url_options = {
         host: ENV['ACTION_MAILER_DEFAULT_URL'],
-        protocol: (config.force_ssl ? 'https' : 'http')
+        protocol: (ENV['SSL_ON'] != 'false' ? 'https' : 'http')
     }
 
     config.valid_login_domains = %w[
