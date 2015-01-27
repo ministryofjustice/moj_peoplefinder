@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+APP_PATH = File.expand_path('../../config/application',  __FILE__)
+require_relative '../config/boot'
+require APP_PATH
+Rails.application.require_environment!
+
+
+def delete_members(memberships)
+  memberships.each do |membership|
+    person = membership.person
+    membership_count = person.memberships.count
+    membership.destroy
+    if membership_count == 1
+      puts "#{person.surname} deleted"
+      person.destroy
+    end
+  end
+end
+
+def delete_group_and_descendants(group)
+  delete_members(group.memberships)
+  group.children.each do |child|
+    delete_group_and_descendants(child)
+  end
+  group.destroy
+  puts "Deleted #{group.name}"
+end
+
+
+if ARGV[0].nil?
+  puts "Please specify a group to delete"
+else
+  parent_group = Peoplefinder::Group.where(name: ARGV[0]).first
+
+  if parent_group.nil?
+    puts "No group found with the name #{ARGV[0]}"
+  else
+    delete_group_and_descendants(parent_group)
+    parent_group.destroy
+  end
+end
+
+
+
+
