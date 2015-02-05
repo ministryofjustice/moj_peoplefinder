@@ -53,11 +53,16 @@ module Peoplefinder
     }
 
     config.valid_login_domains = %w[
-      digital.justice.gov.uk
       digital.cabinet-office.gov.uk
+      digital.justice.gov.uk
+      hmcourts-service.gsi.gov.uk
+      hmcts.gsi.gov.uk
+      hmps.gsi.gov.uk
       justice.gsi.gov.uk
+      legalaid.gsi.gov.uk
+      noms.gsi.gov.uk
+      publicguardian.gsi.gov.uk
       yjb.gsi.gov.uk
-      legalaid.gsi.gov.uk 
     ]
 
     # The following values are required by the phase banner
