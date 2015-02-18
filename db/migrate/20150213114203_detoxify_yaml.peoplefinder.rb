@@ -1,12 +1,16 @@
-# This migration comes from peoplefinder (originally 20150210115300)
 require 'peoplefinder/image_uploader'
 require 'peoplefinder/person'
 class DetoxifyYaml < ActiveRecord::Migration
   class Version < ActiveRecord::Base
   end
 
+  ImageUploader = Peoplefinder::ImageUploader
+  Membership = Peoplefinder::Membership
+  Group = Peoplefinder::Group
+  Person = Peoplefinder::Person
+
   def clean_yaml(yaml)
-    yaml.gsub(/ !ruby\/object:Peoplefinder::ImageUploader::Uploader\d+/, '')
+    yaml.gsub(/ !ruby\/object:(Peoplefinder::)?ImageUploader::Uploader\d+/, '')
   end
 
   def extract_url(image)
@@ -40,9 +44,17 @@ class DetoxifyYaml < ActiveRecord::Migration
   end
 
   def up
+    error_count = 0
+
     Version.all.each do |version|
-      clean_object_changes version
-      clean_object version
+      begin
+        clean_object_changes version
+        clean_object version
+      rescue => e
+        error_count += 1
+        puts "There was a problem #{e} for version #{version.id}"
+      end
     end
+    puts "There were #{error_count} errors"
   end
 end
