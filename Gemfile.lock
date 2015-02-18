@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/ministryofjustice/peoplefinder.git
-  revision: 977f6f337bb7d0e06a1fb9f68897443e228aa9ea
+  revision: 06bc6541a4cbdab54e21b7beeaff4dbc508e4de5
   specs:
     peoplefinder (0.1.1)
       ancestry
@@ -172,7 +172,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mini_magick (4.0.4)
+    mini_magick (4.1.0)
     mini_portile (0.6.2)
     minitest (5.5.1)
     moj_internal_template (0.1.6)
