@@ -24,7 +24,5 @@ en:
   peoplefinder:
     sessions:
       login_page:
-        intro_instructions: |
-          Use your MOJ email address to log-in to and build or edit your profile, or find colleagues.
-        heading_other: Log in with an MOJ email address
+        heading_other: Use an MOJ email address
         body_other: Enter a valid MOJ email address below
