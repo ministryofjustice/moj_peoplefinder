@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/ministryofjustice/peoplefinder.git
-  revision: 06bc6541a4cbdab54e21b7beeaff4dbc508e4de5
+  revision: 985006451c860dbfcd71e0ef2d259b38478ad871
   specs:
     peoplefinder (0.1.1)
       ancestry
@@ -35,7 +35,7 @@ GIT
       jquery-rails
       mail
       mini_magick
-      moj_internal_template (~> 0.1.6)
+      moj_internal_template (~> 0.1.7)
       omniauth-gplus (~> 2.0.1)
       paper_trail (~> 3.0.5)
       pg
@@ -153,7 +153,7 @@ GEM
       ruby_parser (~> 3.5)
     htmlentities (4.3.3)
     i18n (0.7.0)
-    jbuilder (2.2.7)
+    jbuilder (2.2.8)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.2)
