@@ -18,6 +18,10 @@ group :production do
   gem 'logstasher', '~> 0.6.2'
 end
 
+group :development do
+  gem 'foreman'
+end
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
