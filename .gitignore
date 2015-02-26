@@ -15,6 +15,7 @@
 /.env
 /.ruby-version
 /public/assets/
+/public/uploads/
 # ignore osx .DS_Store
 *.DS_Store
 .idea
