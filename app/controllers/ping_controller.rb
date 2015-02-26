@@ -1,7 +1,5 @@
 class PingController  < ActionController::Base
-  respond_to :json
-
   def index
-    respond_with Deployment.info
+    render json: Deployment.info
   end
 end
