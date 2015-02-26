@@ -21,6 +21,7 @@ end
 
 group :development do
   gem 'foreman'
+  gem 'mailcatcher'
 end
 
 group :development, :test do
