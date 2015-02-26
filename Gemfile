@@ -15,9 +15,7 @@ gem 'recipient_interceptor'
 gem 'newrelic_rpm'
 
 group :production do
-  gem 'rails_12factor'
   gem 'logstasher', '~> 0.6.2'
-
 end
 
 group :development, :test do
