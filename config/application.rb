@@ -37,6 +37,8 @@ module Peoplefinder
       from:  config.support_email
     }
 
+    config.active_job.queue_adapter = :delayed_job
+
     config.active_record.raise_in_transactional_callbacks = true
 
     config.elastic_search_url = ENV['MOJ_PF_ES_URL']

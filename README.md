@@ -4,7 +4,17 @@ This is a thin wrapper for the People Finder engine.
 
 To use the engine in your application, see the [People Finder](https://github.com/ministryofjustice/peoplefinder) README.
 
-# Deploying locally
+
+## E-mail configuration
+
+E-mails are configured to be sent using `ActiveJob` with `DelayedJob` background process. 
+
+## Running locally
+
+Locally use of `foreman` is the easiest way of getting unicorn and delayed job to run. Additionally `mailcatcher` process has to run in order to intercept e-mails. To read e-mails being sent, access `http://localhost:1080/`.
+
+
+## Deploying locally
 
 After you do the usual bundle install, to setup the database run:
 

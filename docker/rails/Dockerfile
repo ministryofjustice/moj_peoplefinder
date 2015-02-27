@@ -14,6 +14,7 @@ EXPOSE 80
 
 ADD docker/rails/logstash-conf.sh /etc/logstash-conf.sh
 ADD docker/rails/unicorn.service /etc/service/unicorn/run
+ADD docker/rails/delayed_job.service /etc/service/delayed_job/run
 
 COPY docker/app_env_vars /etc/container_environment/
 

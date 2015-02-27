@@ -8,6 +8,7 @@ gem 'peoplefinder',
 gem 'carrierwave',
   git: 'https://github.com/carrierwaveuploader/carrierwave.git',
   tag: 'cc39842e44edcb6187b2d379a606ec48a6b5e4a8'
+gem 'delayed_job_active_record'
 gem 'omniauth-gplus',
   git: 'https://github.com/ministryofjustice/omniauth-gplus.git'
 
@@ -16,6 +17,11 @@ gem 'newrelic_rpm'
 
 group :production do
   gem 'logstasher', '~> 0.6.2'
+end
+
+group :development do
+  gem 'foreman'
+  gem 'mailcatcher'
 end
 
 group :development, :test do
