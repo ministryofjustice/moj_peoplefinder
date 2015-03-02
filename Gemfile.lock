@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/ministryofjustice/peoplefinder.git
-  revision: 95fa9eb4a9637df0f6012a7b3f1c5f1040dd7864
+  revision: 359c01b0521745b64aad86e3098145c90c127bab
   specs:
     peoplefinder (0.1.1)
       ancestry
@@ -322,7 +322,7 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.0)
+    uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unf (0.1.4)
