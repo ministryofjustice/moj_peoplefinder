@@ -96,4 +96,13 @@ $(function(){
     sendEvent('.breadcrumbs a', 'click', 'profile-page', 'profile-page-breadcrumb-clicked', 'Clicked on a breadcrumb in a profile page');
   });
 
+  ifPage('edit-profile-page', function() {
+    $('.membership-subscribed-check-box').change(function(e) {
+      if (e.target.checked) {
+        ga('send', 'event', 'edit-profile-page', 'check', 'Check team updates');
+      } else {
+        ga('send', 'event', 'edit-profile-page', 'uncheck', 'Uncheck team updates');
+      }
+    });
+  });
 });
