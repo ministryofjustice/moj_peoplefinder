@@ -27,7 +27,5 @@ end
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
-  gem 'jshint',
-    git: 'https://github.com/threedaymonk/jshint.git',
-    branch: 'master'
+  gem 'jshint'
 end
