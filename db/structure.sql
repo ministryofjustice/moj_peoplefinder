@@ -125,8 +125,7 @@ CREATE TABLE groups (
     slug character varying,
     description text,
     ancestry text,
-    ancestry_depth integer DEFAULT 0 NOT NULL,
-    team_email_address text
+    ancestry_depth integer DEFAULT 0 NOT NULL
 );
 
 
@@ -192,7 +191,8 @@ CREATE TABLE memberships (
     role text,
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
-    leader boolean DEFAULT false
+    leader boolean DEFAULT false,
+    subscribed boolean DEFAULT true NOT NULL
 );
 
 
@@ -564,6 +564,13 @@ CREATE INDEX index_memberships_on_person_id ON memberships USING btree (person_i
 
 
 --
+-- Name: index_people_on_lowercase_email; Type: INDEX; Schema: public; Owner: -; Tablespace:
+--
+
+CREATE UNIQUE INDEX index_people_on_lowercase_email ON people USING btree (lower(email));
+
+
+--
 -- Name: index_people_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace:
 --
 
@@ -615,3 +622,9 @@ INSERT INTO schema_migrations (version) VALUES ('20150213114207');
 INSERT INTO schema_migrations (version) VALUES ('20150216160126');
 
 INSERT INTO schema_migrations (version) VALUES ('20150225172300');
+
+INSERT INTO schema_migrations (version) VALUES ('20150310110342');
+
+INSERT INTO schema_migrations (version) VALUES ('20150310110343');
+
+INSERT INTO schema_migrations (version) VALUES ('20150310110344');
