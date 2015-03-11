@@ -196,7 +196,7 @@ a:focus {
   margin: 0 15px;
 }
 #global-header .header-wrapper .header-global .header-logo {
-  margin: 5px 0 2px;
+  margin: 1px 0 -3px 0;
 }
 @media (min-width: 769px) {
   #global-header.with-proposition .header-wrapper .header-global {
@@ -209,12 +209,13 @@ a:focus {
 }
 @media (min-width: 769px) {
   #global-header.with-proposition .header-wrapper .header-proposition {
-    width: 66.66%;
+    width: 33.3%;
     float: left;
   }
 }
 #global-header.with-proposition .header-wrapper .header-proposition .content {
   margin: 0 15px;
+  text-align: center;
 }
 #global-header #logo {
   float: left;
@@ -251,7 +252,7 @@ a:focus {
 }
 #global-header .header-proposition #proposition-name {
   font-family: "nta", Arial, sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
@@ -321,8 +322,7 @@ a:focus {
   text-decoration: underline;
 }
 #global-header-bar .header-bar {
-  height: 10px;
-  background-color: #005ea5;
+  display: none;
 }
 #footer {
   background-color: #dee0e2;
@@ -846,8 +846,6 @@ header.page-header {
   }
 }
 section {
-  max-width: 850px;
-  margin: auto;
 }
 
 @-ms-viewport {
@@ -862,4 +860,6 @@ section {
 @-o-viewport {
   width: device-width;
 }
-
+#global-header-bar {
+  margin-bottom: 1px;
+}
