@@ -57,6 +57,8 @@ module Peoplefinder
         protocol: (ENV['SSL_ON'] != 'false' ? 'https' : 'http')
     }
 
+    config.action_mailer.asset_host = ENV['ACTION_MAILER_DEFAULT_URL']
+
     config.valid_login_domains = %w[
       cjs.gsi.gov.uk
       digital.cabinet-office.gov.uk
