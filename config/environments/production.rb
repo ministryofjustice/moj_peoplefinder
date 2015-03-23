@@ -43,7 +43,8 @@ Rails.application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and
   # use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
+  config.ssl_options = { exclude: proc { |env| env['PATH_INFO'] == "/ping" } }
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
