@@ -13,7 +13,6 @@
 /tmp
 # Ignore environment variable configuration
 /.env
-/.ruby-version
 /public/assets/
 /public/uploads/
 # ignore osx .DS_Store
