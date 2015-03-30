@@ -46,8 +46,6 @@ module Peoplefinder
 
     config.disable_communities = true
 
-    config.exceptions_app = routes
-
     config.ga_tracking_id = (ENV['GA_TRACKING_ID'] || '')
 
     config.rack_timeout = (ENV['RACK_TIMEOUT'] || 14)
