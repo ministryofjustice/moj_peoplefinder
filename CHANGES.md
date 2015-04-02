@@ -1,3 +1,20 @@
+## 0.5.22
+
+### moj_peoplefinder
+
+* `4a8e379` Update peoplefinder gem
+* `f4ba892` Line up commits in changelog
+* `e5c5ea6` Add a changelog so we can track releases
+
+### peoplefinder
+
+* `0fd812c` Merge branch 'new-homepage-design'
+* `ba13b3e` Fixed misalignment
+* `b54508e` Tests fixed
+* `ec5c4fe` Tweaks
+* `20ab1d2` New Homepage Design
+* `ea2abd0` New Homepage design
+
 ## 0.5.21
 
 ### moj_peoplefinder
