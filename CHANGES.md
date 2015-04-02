@@ -1,3 +1,15 @@
+## 0.5.23
+
+### moj_peoplefinder
+
+* `371267e` Update peoplefinder and migrations
+* `4d64d81` Run outstanding migrations
+* `3aeaf23` Update changelog
+
+### peoplefinder
+
+* `0c890df` Add PermittedDomain model
+
 ## 0.5.22
 
 ### moj_peoplefinder
