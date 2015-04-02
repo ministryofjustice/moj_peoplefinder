@@ -149,38 +149,6 @@ ALTER SEQUENCE groups_id_seq OWNED BY groups.id;
 
 
 --
--- Name: information_requests; Type: TABLE; Schema: public; Owner: -; Tablespace:
---
-
-CREATE TABLE information_requests (
-    id integer NOT NULL,
-    recipient_id integer,
-    sender_email character varying,
-    message text,
-    type character varying
-);
-
-
---
--- Name: information_requests_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE information_requests_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: information_requests_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE information_requests_id_seq OWNED BY information_requests.id;
-
-
---
 -- Name: memberships; Type: TABLE; Schema: public; Owner: -; Tablespace:
 --
 
@@ -266,39 +234,6 @@ CREATE SEQUENCE people_id_seq
 --
 
 ALTER SEQUENCE people_id_seq OWNED BY people.id;
-
-
---
--- Name: reported_profiles; Type: TABLE; Schema: public; Owner: -; Tablespace:
---
-
-CREATE TABLE reported_profiles (
-    id integer NOT NULL,
-    notifier_id integer,
-    subject_id integer,
-    recipient_email character varying,
-    reason_for_reporting text,
-    additional_details text
-);
-
-
---
--- Name: reported_profiles_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE reported_profiles_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: reported_profiles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE reported_profiles_id_seq OWNED BY reported_profiles.id;
 
 
 --
@@ -404,13 +339,6 @@ ALTER TABLE ONLY groups ALTER COLUMN id SET DEFAULT nextval('groups_id_seq'::reg
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY information_requests ALTER COLUMN id SET DEFAULT nextval('information_requests_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY memberships ALTER COLUMN id SET DEFAULT nextval('memberships_id_seq'::regclass);
 
 
@@ -419,13 +347,6 @@ ALTER TABLE ONLY memberships ALTER COLUMN id SET DEFAULT nextval('memberships_id
 --
 
 ALTER TABLE ONLY people ALTER COLUMN id SET DEFAULT nextval('people_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY reported_profiles ALTER COLUMN id SET DEFAULT nextval('reported_profiles_id_seq'::regclass);
 
 
 --
@@ -467,14 +388,6 @@ ALTER TABLE ONLY groups
 
 
 --
--- Name: information_requests_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
---
-
-ALTER TABLE ONLY information_requests
-    ADD CONSTRAINT information_requests_pkey PRIMARY KEY (id);
-
-
---
 -- Name: memberships_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
 --
 
@@ -488,14 +401,6 @@ ALTER TABLE ONLY memberships
 
 ALTER TABLE ONLY people
     ADD CONSTRAINT people_pkey PRIMARY KEY (id);
-
-
---
--- Name: reported_profiles_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
---
-
-ALTER TABLE ONLY reported_profiles
-    ADD CONSTRAINT reported_profiles_pkey PRIMARY KEY (id);
 
 
 --
@@ -533,20 +438,6 @@ CREATE INDEX index_groups_on_ancestry ON groups USING btree (ancestry);
 --
 
 CREATE INDEX index_groups_on_slug ON groups USING btree (slug);
-
-
---
--- Name: index_information_requests_on_sender_email; Type: INDEX; Schema: public; Owner: -; Tablespace:
---
-
-CREATE INDEX index_information_requests_on_sender_email ON information_requests USING btree (sender_email);
-
-
---
--- Name: index_information_requests_on_type; Type: INDEX; Schema: public; Owner: -; Tablespace:
---
-
-CREATE INDEX index_information_requests_on_type ON information_requests USING btree (type);
 
 
 --
@@ -628,3 +519,9 @@ INSERT INTO schema_migrations (version) VALUES ('20150310110342');
 INSERT INTO schema_migrations (version) VALUES ('20150310110343');
 
 INSERT INTO schema_migrations (version) VALUES ('20150310110344');
+
+INSERT INTO schema_migrations (version) VALUES ('20150402143602');
+
+INSERT INTO schema_migrations (version) VALUES ('20150402143603');
+
+INSERT INTO schema_migrations (version) VALUES ('20150402143604');
