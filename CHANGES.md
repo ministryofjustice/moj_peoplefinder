@@ -1,10 +1,22 @@
+## 0.5.24
+
+### moj_peoplefinder
+
+* `1230085` Update peoplefinder gem
+
+### peoplefinder
+
+* `3e86451` Merge pull request #100 from ministryofjustice/new-homepage-fixes
+* `44613aa` Update spec to match homepage copy
+* `6f47337` Home page fixes from Eddie and Jon
+
 ## 0.5.23
 
 ### moj_peoplefinder
 
+* `7ad6f84` Update changelog
 * `371267e` Update peoplefinder and migrations
 * `4d64d81` Run outstanding migrations
-* `3aeaf23` Update changelog
 
 ### peoplefinder
 
@@ -14,6 +26,7 @@
 
 ### moj_peoplefinder
 
+* `3aeaf23` Update changelog
 * `4a8e379` Update peoplefinder gem
 * `f4ba892` Line up commits in changelog
 * `e5c5ea6` Add a changelog so we can track releases
